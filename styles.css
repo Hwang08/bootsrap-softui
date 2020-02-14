@@ -3,25 +3,25 @@
 /* Note bootstrap is a mobile first framework so the mobile styles are implemented 1st */
 
 html{
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 /*Variables*/
 :root{
-    --background-color: linear-gradient(120deg, #37393b, #2e3032);
-    --light-font-color: #b9bbc2;
-    --shadow-normal:
-            7px 5px 10px #2b2d2f,
-            -7px -5px 10px #3b3d3f;
-    --shadow-inset:
-            inset 7px 5px 10px #2b2d2f,
-            inset -7px -5px 10px #3b3d3f;
-    --shadow-normal-light:
-            7px 5px 10px rgba(0,0,0,.1),
-            -7px -5px 10px rgba(255, 255, 255, 0.5);
-    --shadow-inset-light:
-            inset 7px 5px 10px rgba(0,0,0,.1),
-            inset -7px -5px 10px rgba(255, 255, 255, 0.5);;
+  --background-color: linear-gradient(120deg, #37393b, #2e3032);
+  --light-font-color: #b9bbc2;
+  --shadow-normal:
+          7px 5px 10px #2b2d2f,
+          -7px -5px 10px #3b3d3f;
+  --shadow-inset:
+          inset 7px 5px 10px #2b2d2f,
+          inset -7px -5px 10px #3b3d3f;
+  --shadow-normal-light:
+          7px 5px 10px rgba(0,0,0,.1),
+          -7px -5px 10px rgba(255, 255, 255, 0.5);
+  --shadow-inset-light:
+          inset 7px 5px 10px rgba(0,0,0,.1),
+          inset -7px -5px 10px rgba(255, 255, 255, 0.5);;
 }
 
 a{
@@ -31,7 +31,7 @@ a{
 }
 
 a:hover{
-  color: #c92b7d !important;
+  color: 	#1e90ff !important;
 }
 
 p{
@@ -64,7 +64,7 @@ header{
 }
 
 .nav-brand span{
-  color: #c92b7d;
+  color: 	#1e90ff;
   font-weight: 400;
   transition: color .5s ease-in-out;
 }
@@ -118,8 +118,6 @@ a.nav-brand:hover span{
   box-shadow: var(--shadow-inset);
 }
 
-
-
 /* -------------- Header End-------------- */
 /* -------------- Hero Start-------------- */
 .hero{
@@ -138,10 +136,6 @@ a.nav-brand:hover span{
   font-size: 50px;
   margin-top: 50px;
   text-transform: uppercase;
-}
-
-.main-heading::first-letter{
-  text-transform: lowercase;
 }
 
 img{
@@ -206,7 +200,7 @@ img{
 
 .item-icon i{
   font-size: 30px;
-  color: #c92b7d;
+  color: 	#1e90ff;
   margin-right: 30px;
 }
 
@@ -243,7 +237,7 @@ footer h5{
   }
 
   .main-content img{
-    width: 60%;
+    width: 50%;
   }
 
   .section-heading{
@@ -279,9 +273,15 @@ footer h5{
 
 }
 
+@media screen and (min-width: 1000px){
+  .main-content img{
+    width: 35%;
+  }
+}
+
 @media screen and (min-width: 1200px){
   .main-content img{
-    width: 40%;
+    width: 35%;
   }
 }
 /* -------------- Media Queries End-------------- */
