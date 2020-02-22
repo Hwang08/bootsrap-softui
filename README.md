@@ -6,4 +6,3 @@ This website is a static Front End promotion website for the Samsung Galaxy S10.
 - CSS 3
 - Bootstrap 4
 - Responsive UI Design
-- Javascript
