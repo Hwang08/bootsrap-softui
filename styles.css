@@ -2,6 +2,10 @@
 
 /* Note bootstrap is a mobile first framework so the mobile styles are implemented 1st */
 
+* {
+  background-color: #000;
+}
+
 html{
   font-family: 'Roboto', sans-serif;
 }
@@ -9,35 +13,47 @@ html{
 /*Variables*/
 :root{
   --background-color: linear-gradient(120deg, #37393b, #2e3032);
+  --background-color2: linear-gradient(120deg, #000000, #2e3032);
   --light-font-color: #b9bbc2;
-  --shadow-normal:
-          7px 5px 10px #2b2d2f,
-          -7px -5px 10px #3b3d3f;
-  --shadow-inset:
-          inset 7px 5px 10px #2b2d2f,
-          inset -7px -5px 10px #3b3d3f;
-  --shadow-normal-light:
-          7px 5px 10px rgba(0,0,0,.1),
-          -7px -5px 10px rgba(255, 255, 255, 0.5);
-  --shadow-inset-light:
-          inset 7px 5px 10px rgba(0,0,0,.1),
-          inset -7px -5px 10px rgba(255, 255, 255, 0.5);;
+  --btn-color: rgb(104, 104, 104);
 }
 
 a{
   text-decoration: none !important;
   color: var(--light-font-color);
+  color: silver;
+  color: lightgray;
+  /* color: #000; */
   transition: color .5s ease-in-out; 
 }
 
 a:hover{
   color: 	#1e90ff !important;
+  color: 	#fff !important;
 }
+/* a:hover{
+  color: 	#1e90ff !important;
+} */
 
 p{
   font-weight: 300;
 }
 
+.light-font {
+  color: var(--light-font-color);
+}
+/* -------------- Components Start-------------- */
+.btn{
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-size: 14px;
+  color: #fff;
+  color: silver;
+  text-transform: uppercase;
+  background-color: var(--btn-color);
+}
+/* -------------- Components End-------------- */
 /* -------------- Header Start-------------- */
 header{
   width: 100%;
@@ -57,20 +73,21 @@ header{
 }
 
 .nav-brand{
-  font-size: 34px;
-  color: #fff;
-  letter-spacing:L 2px;
+  font-size: 23px;
   font-weight: 300;
 }
 
-.nav-brand span{
-  color: 	#1e90ff;
-  font-weight: 400;
-  transition: color .5s ease-in-out;
+.nav-brand .logo {
+  width: 150px;
+  margin-right: 20px;
 }
 
-a.nav-brand:hover span{
-  color: #fff;
+.nav-brand span {
+    color: #fff;
+}
+
+.nav-brand .vertical-line, span {
+  margin-right: 15px;
 }
 
 /* Hamburger Menu */
@@ -106,11 +123,20 @@ a.nav-brand:hover span{
 }
 
 .nav-link{
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   padding: 10px 20px;
-  /* soft ui effect on the mobile nav links */
-  box-shadow: var(--shadow-normal);
   border-radius: 20px;
+  text-transform: uppercase;
+  font-size: 14px;
+  /* border: 1px solid #fff; */
+  /* color: #fff; */
+}
+
+.nav-link {
+  background-color: var(--btn-color);
+}
+.nav-link2 {
+  background-color: #1e90ff;
 }
 
 .nav-link:hover,
@@ -122,58 +148,59 @@ a.nav-brand:hover span{
 /* -------------- Hero Start-------------- */
 .hero{
   width: 100%;
-  height: 65vh;
-  background-image: var(--background-color);
+  height: 1000px;
+  background-color: #000;
   /* image is to big for the backround color so there is overflow. This cuts off the overflowing image where the background image ends. */
   overflow: hidden; 
 }
 
 .main-content{
-  color: var(--light-font-color)
+  /* color: var(--light-font-color) */
+  color: #fff;
 }
 
 .main-heading{
-  font-size: 50px;
-  margin-top: 50px;
-  text-transform: uppercase;
+  font-size: 45px;
+  margin-top: 150px;
+}
+.second-heading{
+  font-size: 45px;
+}
+.second-heading:nth-child(4){
+  margin-bottom: 50px;
 }
 
-img{
-  width: 80%;
+.hero .img2{
+  width: 18%;
 }
+
 /* -------------- Hero End-------------- */
 /* -------------- Closer look Start-------------- */
-.light-bg{
-  background-color: #dae1eb;
+.closer-look {
+  padding: 150px 0;
+  color: var(--light-font-color);
+  background-color: #000;
+}
+
+.closer-look ul {
+  list-style: "-       ";
+  list-style-position: outside;
 }
 
 .section-heading{
-  text-transform: uppercase;
+  color: #fff;
   font-size: 20px;
+  text-transform: capitalize;
 }
 
-.btn-soft{
-  letter-spacing: 2px;
-  padding: 10px 20px;
-  font-size: 12px;
-  border-radius: 20px;
-}
+/* .closer-look-img {
+  width: 80%;
+} */
 
-/* target the class btn-soft and dark so you have to chain them together */
-.btn-soft.light{
-  box-shadow: var(--shadow-normal-light);
-  color: #000;
-}
-
-.btn-soft.light:hover,
-.btn-soft.light:focus{
-  box-shadow: var(--shadow-inset-light);
-}
 /* -------------- Closer look End-------------- */
 /* -------------- Sharp Contrast Start-------------- */
-.sharp-contrast{
-  /* it is a background-image and NOT backround-color because the backround is a gradient */
-  background-image: var(--background-color);
+.black {
+  background-color: #000;
   color: var(--light-font-color);
 }
 
@@ -186,12 +213,50 @@ img{
   box-shadow: var(--shadow-inset);
 }
 /* -------------- Sharp Contrast End-------------- */
+
+/* -------------- Accessories Start-------------- */
+.accessories {
+  padding-bottom: 200px !important;
+}
+
+.acc-h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 300;
+}
+/* -------------- Accessories End-------------- */
+
+/* -------------- PreOrder Start-------------- */
+.preorder {
+  width: 100%;
+  /* padding-top: 0px !important; */
+  padding-bottom: 120px !important;
+  background-color: #000;
+}
+
+.preorder-h1 {
+  color: #fff;
+}
+
+.preorder-h3 {
+font-size: 17px;
+font-weight: 300;
+}
+
+.preorder-btn {
+  background-color: #1e90ff !important;
+}
+/* -------------- PreOrder End-------------- */
+
 /* -------------- Features Start-------------- */
+/* .features {
+  background-image: var(--background-color);
+  color: var(--light-font-color);
+}
 .features-item{
   display: flex;
   align-items: center;
   padding: 20px;
-  box-shadow: var(--shadow-normal-light);
 }
 
 .features-item:hover{
@@ -213,33 +278,150 @@ img{
 
 .item-text p{
   margin: 0;
-}
+} */
 /* -------------- Features End-------------- */
 /* -------------- Footer Start-------------- */
-footer{
-  background-image: var(--background-color);
-  color: var(--light-font-color);
+.footer{
+  background-color: #000;
+  padding-bottom: 100px!important;
+}
+
+.footer-link {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.footer-link .logo {
+  width: 120px;
+  margin-right: 20px
 }
 
 footer a{
   font-weight: 300;
 }
 
-footer h5{
+/* footer h5{
   color: #fff;
   font-size: 16px;
+} */
+
+.up-icon {
+  margin-right: 15px;
+  padding: 8px;
+  border: .5px solid rgb(66, 66, 66);
+  border-radius: 50%;
 }
 /* -------------- Footer End-------------- */
 /* -------------- Media Queries Start-------------- */
-@media screen and (min-width: 768px){
+@media screen and (max-width: 768px) {
+  .hero  {
+    height: 750px;
+  }
+  .hero .img2 {
+    width: 30%;
+  }
+  .sharp-contrast-img {
+    margin-bottom: 60px !important;
+  }
+  .speed-img {
+    margin-bottom: 60px !important;
+  }
+  .acc-img {
+    margin-bottom: 70px !important;
+  }
+  .acc-h3 {
+    font-size: 1rem;
+  }
+  .footer-logo {
+    text-align: center!important;
+  }
+  .scroll-up {
+    margin-top: 45px;
+    justify-content: center!important;
+  }
+  .scroll-up a{
+    margin: 0 !important;
+  }
+}
+
+@media screen and (max-width: 610px){
+  header .nav-container {
+    padding: 0 20px!important;
+  }
+
+  .nav-brand .logo {
+    width: 100px;
+    margin-right: 10px;
+  }
+
+  .nav-brand .vertical-line {
+    margin-right: 5px;
+  }
+
+  .nav-brand span {
+    font-size: 17px;
+  }
+
   .main-heading{
-    margin-top: 150px;
+    font-size: 35px;
+  }
+  .second-heading{
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 576px){
+  .container {
+    padding: 0 40px!important;
+  }
+  .hero .img2 {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 448px){
+  .hero  {
+    height: 650px;
+  }
+  .hero .img2 {
+    width: 40%;
+  }
+  .nav-brand .logo {
+    width: 80px;
+  }
+  .nav-brand span {
+    font-size: 12px;
+    margin-right: 0px;
   }
 
-  .main-content img{
-    width: 50%;
+  .main-heading{
+    font-size: 25px;
+  }
+  .second-heading{
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 320px){
+  header .nav-container {
+    padding: 0 15px!important;
+  }
+  .hero .img2 {
+    width: 45%;
+  }
+  .nav-brand .logo {
+    width: 75px;
+  }
+  .nav-brand span {
+    font-size: 10px;
   }
 
+  .main-heading{
+    font-size: 20px;
+  }
+  .second-heading{
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 768px){
   .section-heading{
     font-size: 30px;
   }
@@ -269,19 +451,6 @@ footer h5{
 
   .nav-item:last-child{
     margin-right: 0;
-  }
-
-}
-
-@media screen and (min-width: 1000px){
-  .main-content img{
-    width: 35%;
-  }
-}
-
-@media screen and (min-width: 1200px){
-  .main-content img{
-    width: 35%;
   }
 }
 /* -------------- Media Queries End-------------- */
