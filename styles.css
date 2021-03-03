@@ -21,19 +21,13 @@ html{
 a{
   text-decoration: none !important;
   color: var(--light-font-color);
-  color: silver;
   color: lightgray;
-  /* color: #000; */
   transition: color .5s ease-in-out; 
 }
 
 a:hover{
-  color: 	#1e90ff !important;
   color: 	#fff !important;
 }
-/* a:hover{
-  color: 	#1e90ff !important;
-} */
 
 p{
   font-weight: 300;
@@ -137,6 +131,7 @@ header{
 }
 .nav-link2 {
   background-color: #1e90ff;
+  color: #dcdcdc !important;
 }
 
 .nav-link:hover,
@@ -245,6 +240,7 @@ font-weight: 300;
 
 .preorder-btn {
   background-color: #1e90ff !important;
+  color: #dcdcdc !important;
 }
 /* -------------- PreOrder End-------------- */
 
